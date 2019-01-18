@@ -15,10 +15,12 @@ Create a new folder say "backend". Copy screenshots.model.js, server.js. Place p
 ```
 npm install  (installs node server dependencies)
 npm install -g nodemon
-nodemon server  (to start node server)
+
 mongod (starts mongo driver. Ensure mongoDB is installed on your system)
 mongo (once the mongo client is started. It will prompt for database)
 use screenshots (this will switch to screenshots DB that we have created)
+
+nodemon server  (to start node server)
 ```
 ## Test webservices using postman
 
