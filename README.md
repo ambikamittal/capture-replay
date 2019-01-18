@@ -14,6 +14,7 @@ Then open [`http://localhost:3030/`](http://localhost:3030/). This will open the
 Create a new folder say "backend". Copy screenshots.model.js, server.js. Place package-mongo.json and rename it to package.json. 
 ```
 npm install  (installs node server dependencies)
+npm install -g nodemon
 nodemon server  (to start node server)
 mongod (starts mongo driver. Ensure mongoDB is installed on your system)
 mongo (once the mongo client is started. It will prompt for database)
