@@ -1,7 +1,13 @@
 # Capture Replay
 
-## To run locally
+This application is divided into three components -
+1) frontend - a web application
+2) backend - mongo DB and a node server to host a few services
+3) Replay component - a simple HTML page that fetches the screenshots from MongoDB
 
+## To run frontend locally
+
+Navigate to frontend folder 
 ```
 npm install
 npm start
@@ -11,12 +17,12 @@ Then open [`http://localhost:3030/`](http://localhost:3030/). This will open the
 
 ## To setup node server and mongo db
 
-Create a new folder say "backend". Copy screenshots.model.js, server.js. Place package-mongo.json and rename it to package.json. 
+Navigate to backend folder and open a new Git bash window
 ```
 npm install  (installs node server dependencies)
 npm install -g nodemon
 
-mongod (starts mongo driver. Ensure mongoDB is installed on your system)
+mongod (starts mongo driver. Ensure mongoDB is installed on your system before you run this command)
 mongo (once the mongo client is started. It will prompt for database)
 use screenshots (this will switch to screenshots DB that we have created)
 
