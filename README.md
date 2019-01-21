@@ -13,20 +13,21 @@ npm install
 npm start
 ```
 
-Then open [`http://localhost:3030/`](http://localhost:3030/). This will open the UI application.
+Then open [`http://localhost:3030/`](http://localhost:3030/) to launch the UI application.
 
 ## To setup node server and mongo db
 
+Install MongoDB and open two command prompt windows to run the following commands: 
+```
+mongod (starts mongo driver. Ensure mongoDB is installed on your system before you run this command)
+mongo (once the mongo client is started. It will prompt for database)
+use screenshots (this will switch to screenshots DB)
+```
 Navigate to backend folder and open a new Git bash window
 ```
 npm install  (installs node server dependencies)
 npm install -g nodemon
-
-mongod (starts mongo driver. Ensure mongoDB is installed on your system before you run this command)
-mongo (once the mongo client is started. It will prompt for database)
-use screenshots (this will switch to screenshots DB that we have created)
-
-nodemon server  (to start node server)
+nodemon server  (starts node server to )
 ```
 ## Test webservices using postman
 
