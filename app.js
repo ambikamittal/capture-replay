@@ -1,11 +1,10 @@
 const app = document.getElementById('content');
-
+let pause = false;
+const card = document.createElement('div');
+let playbackIntervalId = null;
 
 function replay(){
 	var request = new XMLHttpRequest();
-	var currentFrameIdx = 0;
-	var playbackIntervalId = null;
-	const card = document.createElement('div');
 	card.setAttribute('class', 'card');
 	request.open('GET', 'http://localhost:4000/screenshots', true);
 	request.onload = function () {
@@ -35,15 +34,15 @@ function replay(){
     app.appendChild(errorMessage);
   }
 }
-
-
+request.send();
+}
 
 function playback(interval) {
-  clearInterval(playbackIntervalId);
   if (!card.children.length) {
     return;
   }
   var i = 0;
+  if(!pause){
   playbackIntervalId = setInterval(function() {
     var iframe = card.children[i];
     if (i > 0) {
@@ -55,7 +54,9 @@ function playback(interval) {
     i++;
     i %= card.children.length;
   }, interval);
-}
-
-request.send();
+  }
+  if(pause){
+	  clearInterval(playbackIntervalId);
+  }
+  pause = !pause;
 }
