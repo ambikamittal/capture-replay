@@ -7,26 +7,27 @@ import { reducer as reduxFormReducer } from 'redux-form'
 
 const dest = document.getElementById('content')
 const reducer = combineReducers({
-  form: reduxFormReducer // mounted under "form"
+    form: reduxFormReducer // mounted under "form"
 })
-const store = (window.devToolsExtension
-  ? window.devToolsExtension()(createStore)
-  : createStore)(reducer)
+const store = (window.devToolsExtension ?
+    window.devToolsExtension()(createStore) :
+    createStore)(reducer)
 
 const showResults = values =>
-  new Promise(resolve => {
-    setTimeout(() => {
-      // simulate server latency
-      window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`)
-      resolve()
-    }, 500)
-  })
+    new Promise(resolve => {
+        setTimeout(() => {
+            // simulate server latency
+            window.alert('Application submitted successfully')
+            resolve()
+        }, 500)
+        doScreenshot();
+    })
 
 let render = () => {
-  const WizardForm = require('./WizardForm').default
-  
-  ReactDOM.hydrate(
-    <Provider store={store}>
+    const WizardForm = require('./WizardForm').default
+
+    ReactDOM.hydrate(
+        <Provider store={store}>
       
 
         <WizardForm onSubmit={showResults} />
@@ -36,8 +37,8 @@ let render = () => {
        
     
     </Provider>,
-    dest
-  )
+        dest
+    )
 }
 
 render()
