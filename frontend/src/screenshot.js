@@ -65,7 +65,7 @@ function screenshotPage() {
 
     // 3. Screenshot should be readyonly, no scrolling, and no selections.
     screenshot.style.pointerEvents = 'none';
-    screenshot.style.overflow = 'hidden';
+    screenshot.style.overflow = 'scroll';
 
 
     // 4. Preserve current x,y scroll position of this page. See addOnPageLoad_().

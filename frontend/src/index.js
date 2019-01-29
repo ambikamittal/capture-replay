@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 import { reducer as reduxFormReducer } from 'redux-form'
-
+import {doScreenshot} from './screenshot'
 
 const dest = document.getElementById('content')
 const reducer = combineReducers({
