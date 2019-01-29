@@ -2,7 +2,7 @@
 
 This application is divided into three components -
 1) frontend - a web application
-2) backend - mongo DB and a node server to host a few services
+2) backend - mongo DB Atlas and a node server to host a few services
 3) Replay component - a simple HTML page that fetches the screenshots from MongoDB
 
 ## To run frontend locally
@@ -15,14 +15,8 @@ npm start
 
 Then open [`http://localhost:3030/`](http://localhost:3030/) to launch the UI application.
 
-## To setup node server and mongo db
+## To setup node server
 
-Install MongoDB and open two command prompt windows to run the following commands: 
-```
-mongod (starts mongo driver. Ensure mongoDB is installed on your system before you run this command)
-mongo (once the mongo client is started. It will prompt for database)
-use screenshots (this will switch to screenshots DB)
-```
 Navigate to backend folder and open a new Git bash window
 ```
 npm install  (installs node server dependencies)
