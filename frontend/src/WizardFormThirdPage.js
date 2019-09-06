@@ -33,6 +33,9 @@ const WizardFormThirdPage = props => {
             id="employed"
             component="input"
             type="checkbox"
+			value = {false}
+			checked={value}
+			onChange={!value}
           />
         </div>
       </div>
